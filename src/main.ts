@@ -9,7 +9,9 @@ async function bootstrap() {
   // Create a Swagger configuration using the DocumentBuilder
   const config = new DocumentBuilder()
     .setTitle('Flight API')
-    .setDescription('API documentation for the flight service')
+    .setDescription(
+      'The Flight Service API is a robust and secure solution designed to provide users with access to comprehensive flight information and search capabilities. Built using the NestJS framework, this API offers a reliable way to retrieve flight details, search for flights based on various parameters, and deliver accurate results in a structured format.',
+    )
     .setVersion('1.0')
     .build();
 
