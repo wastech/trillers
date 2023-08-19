@@ -3,7 +3,7 @@ import { FlightService } from './flight.service';
 import { FlightSearchDto } from './dto/flight.dto';
 import { ApiOperation, ApiResponse, ApiQuery, ApiParam } from '@nestjs/swagger';
 
-@Controller('flight')
+@Controller('v1/flights')
 export class FlightController {
   constructor(private readonly flightService: FlightService) {}
 

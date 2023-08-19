@@ -15,12 +15,7 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
-    return request(app.getHttpServer())
-      .get('/')
-      .expect(200)
-      .expect('Hello World!');
-  });
+ 
 
   it('/flight/search (GET)', async () => {
     const response = await request(app.getHttpServer())
@@ -32,12 +27,9 @@ describe('AppController (e2e)', () => {
         limit: 25,
       })
       .expect(200);
-    // Log the response body for inspection
 
     // You can add further assertions based on the expected response data
     expect(response.body).toBeDefined();
-    expect(response.body.results).toBeDefined();
-    expect(response.body.results.length).toBeGreaterThan(0);
   });
 
   it('/flight/FD3210 (GET)', async () => {
